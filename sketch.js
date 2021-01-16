@@ -3,26 +3,26 @@ var jerry,j1,j2;
 var bg,backG;
 function preload() {
     //load the images here
-    bg=loadImage("images/garden.png");
-    t1=loadAnimation("images/tomOne.png");
-    t2=loadAnimation("images/tomTwo.png","images/tomThree.png");
-    t3=loadAnimation("images/tomFour.png");
-    j1=loadAnimation("images/jerryThree.png");
-    j2=loadAnimation("images/jerryFour.png");
+    bg=loadImage("garden.png");
+    t1=loadAnimation("tomOne.png");
+    t2=loadAnimation("tomTwo.png","tomThree.png");
+    t3=loadAnimation("tomFour.png");
+    j1=loadAnimation("jerryThree.png");
+    j2=loadAnimation("jerryFour.png");
 }
 
 function setup(){
-    createCanvas(1000,800);
-     backG=createSprite(500,400,5,5);
+    createCanvas(windowWidth,windowHeight);
+     backG=createSprite(width/2,height/2,5,5);
      backG.addImage(bg);
      backG.scale=1.2;
      //create tom and jerry sprites here
-     tom=createSprite(900,700,50,50);
+     tom=createSprite(width-40,height-40,50,50);
     
      tom.addAnimation("run",t2);
      //tom.addAnimation("end",t3);
      tom.scale=0.1;
-     jerry=createSprite(100,700,50,50);
+     jerry=createSprite(width+40,height-40,50,50);
      jerry.addAnimation("run",j1);
      
 
